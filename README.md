@@ -17,9 +17,9 @@ To accomplish the goals, we have some objectives:
 
 ## Dataset
 We are using Ecommerce Dataset from [here](https://www.kaggle.com/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction). The dataset contains features from every unique customer. These are the insight from the dataset: <br>
-+ Our Target is `Churn` feature (binary)
++ Our Target is `Churn` feature
 + Customer account information such as `CustomerID`,`Tenure`, `Preferred Login Device`, `Gender`, `CityTier`, `Number of Device Registered`, `Marital Status` and `Number of Address`
-+ Customer transaction information such as `Warehouse to Home`,`Preferred Payment Mode`, `Hour Spend on App`, `Preferred Order Category`,`Satisfaction Score`, 'Complain`, `Order Amount Hike From Last Year`,`Coupon Used`, `Order Count`, `Day Since Last Order`, and `Cashback Amount`
++ Customer transaction information such as `Warehouse to Home`,`Preferred Payment Mode`, `Hour Spend on App`, `Preferred Order Category`,`Satisfaction Score`, `Complain`, `Order Amount Hike From Last Year`,`Coupon Used`, `Order Count`, `Day Since Last Order`, and `Cashback Amount`
 
 ## Exploratory Data Analysis
 This section consists some early insight of our data. We are checking the data distribution from each feature using univariate analysis. We found some data are skewed and some have outliers in the distribution. And then we gain feature correlation using correlation heatmap. And then we are grouping data into 2 categories: numerical and categories for data preprocessing
