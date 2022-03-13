@@ -8,7 +8,7 @@ The aim of this project is to demonstrate predictive customer churn using superv
 + Minimize the Churn Rate
 + Maximize Potential Revenue
 
-To accomplish the goals, we have some objectives:
+To accomplish the goals, here is some objectives:
 + Gain customer insight from our dataset
 + Determine factors that makes customer churn
 + Predict Customer who likely to churn
@@ -16,7 +16,7 @@ To accomplish the goals, we have some objectives:
 
 
 ## Dataset
-We are using Ecommerce Dataset from [here](https://www.kaggle.com/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction). The dataset contains features from every unique customer. These are the insight from the dataset: <br>
+The dataset is using Ecommerce Dataset from [here](https://www.kaggle.com/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction). The dataset contains features from every unique customer. These are the insight from the dataset: <br>
 + Our Target is `Churn` feature
 + Customer account information such as `CustomerID`,`Tenure`, `Preferred Login Device`, `Gender`, `CityTier`, `Number of Device Registered`, `Marital Status` and `Number of Address`
 + Customer transaction information such as `Warehouse to Home`,`Preferred Payment Mode`, `Hour Spend on App`, `Preferred Order Category`,`Satisfaction Score`, `Complain`, `Order Amount Hike From Last Year`,`Coupon Used`, `Order Count`, `Day Since Last Order`, and `Cashback Amount`
@@ -29,13 +29,16 @@ This section is to determine the distribution data by our target from each featu
 
 ## Data Preprocessing
 ### Handling Missing Value and Duplicate Data
-We are checking the missing value from each feature. Based on the data and their distribution, we determine the strategy to impute each feature that have null values. And then we are checking if any data have duplication (which luckily we don't have in our dataset)
+Checking the missing value from each feature. Based on the data and their distribution, the strategy is to impute each feature that have null values. 
 
-### Replacement Value
-From Exploratory Data Analysis, we saw that there are some values that seems equal from our categorical feature. We replace the value that seems to be same so we have unique value from the feature
+### Mislabeled Data
+From Exploratory Data Analysis, there are mislabeled data from the categorical feature. 
 
 ### Feature Engineering
-For each of our categorical feature, we are using one hot encoding to transfrom each value into each feature.
+For each of the categorical feature, the feature is transfrom using one hot encoding to transfrom each value into each feature.
 
 ### Data Transformation
-We determine the data transformation strategy for our numerical feature based on their distribution data and we transform them for our modeling purpose. After that, we drop our outdated columns.
+Determine the data transformation strategy for the numerical feature based on their distribution data and transform them for modeling purpose. After that, drop the outdated columns.
+
+## Modeling
+I am using pycaret to build models from the dataset. Split the dataset 7:3 for training and testing. And then build some clasification models using KNN, Random Forest, Decision Tree, AdaBoost, Light GBM, and Logistic Regression. The metrics that i try to achieve is recall, since i am looking for actual churn to reduce the churn rate and maximize the potential revenue. Light GBM model offers the best performance with the best execution time. 
